@@ -13,6 +13,15 @@
   <body>
     <nav>
       <a href="/">Bulletin Board</a>
+      <!-- Check the cookie to see if it is nil or if there is a user -->
+      <!-- Don't have to check or query cookies ourselves, devise does this for us with 'current_user' -->
+      <% if current_user != nil %>
+        <a href="/users/sign_out">Sign out</a>
+        <a href="/users/edit">Edit profile</a>
+      <% else %>
+        <a href="/users/sign_up">Sign up</a>
+        <a href="/users/sign_in">Sign in</a>
+      <% end %>
     </nav>
 
     <hr>
