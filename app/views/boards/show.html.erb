@@ -69,7 +69,7 @@
       <%= a_post.title %>
       <% if current_user != nil %>
         <% if current_user.id == a_post.user_id %>
-        <a href="/delete_post/<%= a_post.id %>">Delete</a>
+        <a href="/delete_post/<%= a_post.id %>">Delete post</a>
         <% end %>
       <% end %>
       </td>
@@ -99,7 +99,7 @@
         <%= a_post.title %>
         <% if current_user != nil %>
           <% if current_user.id == a_post.user_id %>
-        <a href="/delete_post/<%= a_post.id %>">Delete</a>
+        <a href="/delete_post/<%= a_post.id %>">Delete post</a>
           <% end %>
         <% end %>
       </td>
